@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #0E1220;
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(105, 125, 190, 0.18), transparent 60%),
+    radial-gradient(circle at 50% 100%, rgba(0, 0, 0, 0.55), transparent 55%);
+  background-attachment: fixed;
+  color: #F2EFE6;
+}
+
+::selection {
+  background: #79C7C2;
+  color: #0E1220;
+}
+
+:focus-visible {
+  outline: 2px solid #E3B961;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
