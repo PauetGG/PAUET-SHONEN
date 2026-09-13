@@ -15,6 +15,7 @@ export type TipusMissio = "main" | "side";
 export type Perfil = {
   id: string;
   nickname: string | null;
+  avatar: string | null;
   level: number;
   xp: number;
   stats: Record<ClauEstadistica, number>;

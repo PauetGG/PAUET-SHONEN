@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation";
+import Avatar from "@/components/Avatar";
 import BarraExperiencia from "@/components/BarraExperiencia";
 import TaulaEstadistiques from "@/components/TaulaEstadistiques";
 import Panell from "@/components/ui/Panell";
@@ -22,14 +23,15 @@ export default async function Personatge() {
 
   if (!data) redirect("/entrar");
   const perfil = data as Perfil;
-  const inicial = (perfil.nickname ?? "?").charAt(0).toUpperCase();
 
   return (
     <Panell titol="PERSONATGE">
       <div className="grid gap-6 sm:grid-cols-[auto_1fr]">
-        <div className="flex h-28 w-28 items-center justify-center justify-self-center rounded border-2 border-vora/70 bg-camp/80 shadow-panell sm:justify-self-start">
-          <span className="font-menu text-5xl text-or">{inicial}</span>
-        </div>
+        <Avatar
+          avatar={perfil.avatar}
+          nickname={perfil.nickname}
+          className="h-40 w-32 justify-self-center sm:justify-self-start"
+        />
 
         <div className="self-center">
           <p className="font-menu text-2xl tracking-[0.16em] text-text">
