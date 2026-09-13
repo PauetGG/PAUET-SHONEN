@@ -67,7 +67,7 @@ export default function Navegacio() {
       </nav>
 
       {/* Barra inferior (mòbil) */}
-      <nav className="fixed inset-x-0 bottom-0 z-40 border-t-2 border-vora/60 bg-panell/95 backdrop-blur md:hidden">
+      <nav className="nav-inferior fixed inset-x-0 bottom-0 z-40 border-t-2 border-vora/60 bg-panell/95 backdrop-blur md:hidden">
         <ul className="flex">
           {SECCIONS.map(({ ruta: r, etiqueta }) => {
             const actiu = ruta === r;

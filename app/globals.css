@@ -4,6 +4,8 @@
 
 body {
   background-color: #0E1220;
+  /* safe-area: evita que el contingut quedi sota la barra de l'iPhone */
+  padding-top: env(safe-area-inset-top);
   background-image:
     radial-gradient(circle at 50% 0%, rgba(105, 125, 190, 0.18), transparent 60%),
     radial-gradient(circle at 50% 100%, rgba(0, 0, 0, 0.55), transparent 55%);
@@ -29,4 +31,9 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* La barra inferior de navegacio ha de respectar el gest de l'iPhone */
+.nav-inferior {
+  padding-bottom: env(safe-area-inset-bottom);
 }
